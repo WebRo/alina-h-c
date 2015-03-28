@@ -1,0 +1,17 @@
+{
+  "name": "Gulp-bayram",
+  "version": "1.0.0",
+  "description": "Just Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bayram",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-compass": "^2.0.4",
+    "gulp-connect": "^2.2.0",
+    "gulp-uglify": "^1.1.0"
+  }
+}

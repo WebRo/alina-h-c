@@ -1,0 +1,91 @@
+/*==============================
+=           MAIN HEADED            =
+==============================*/
+.main-header{
+	height:100%;
+	width:100%;
+	position:relative;
+	//overflow:hidden;
+	.top-section{
+		z-index: 99999;
+		min-height: $_theme_margin * 4;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		background-color: rgba($_black, 0.3);
+		@include clearfix();
+		.social{ // Top Social Menu 
+			li{
+				display: inline-block;
+				margin: 0 $_theme_margin * 0.3  0 0;
+				a{
+					line-height: $_theme_margin * 4;
+					color: $_white;
+					font-size: $_theme_margin * 0.7;
+				}
+			}
+		}
+		
+		.logo{ //LOGO
+			//
+			h2{
+				display: block;
+				margin: 0 ;
+				padding:0;
+				line-height: $_theme_margin * 4;
+				text-align: center;
+				color: $_white;
+			} 
+
+		}
+
+		.search-lup{
+			a{
+				line-height: $_theme_margin * 4;
+				margin: auto;
+				margin-right: 0;
+				display: table;
+				//float: right;
+				color: $_white;
+				font-size: $_theme_margin * 0.7;
+
+			}
+		}
+	}
+	.top-slider{  // Caresouel
+		//position: relative;
+		height: 100%;
+		top: 0;
+		z-index: 8888;
+		img{
+			//max-height: 100%;
+
+		}
+	}
+}
+.top-slider .item{
+	//position:absolute;
+	height: 100%;
+	box-sizing: border-box;
+
+}
+.top-slider .item img{
+	height: 100%;
+	width:100%;
+	}
+
+/*-----  End of MAIN HEADER  ------*/
+
+
+html, body {
+height:100%;
+margin:0;
+padding:0;
+}
+.carousel, .item, .active {
+height:100%;
+}
+.carousel-inner {
+height:100%;
+}

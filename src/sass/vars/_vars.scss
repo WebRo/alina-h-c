@@ -1,0 +1,17 @@
+$_theme_margin : 24px;
+
+
+/*-----  CLEARFIX  ------*/
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/*-----  BOX SIZING  ------*/
+
