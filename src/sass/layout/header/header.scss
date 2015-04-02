@@ -8,19 +8,21 @@
 	//overflow:hidden;
 	.top-section{
 		z-index: 99999;
-		min-height: $_theme_margin * 4;
+		//min-height: $_theme_margin * 4;
 		width: 100%;
 		padding: 0;
 		margin: 0;
-		position: absolute;
-		background-color: rgba($_black, 0.3);
+		position: relative;
+		display: block;
+		background-color: rgba($_black, 0.8);
 		@include clearfix();
 		.social{ // Top Social Menu 
+			display: flex;
 			li{
-				display: inline-block;
-				margin: 0 $_theme_margin * 0.3  0 0;
+				//display: inline-block;
+				margin: auto;
 				a{
-					line-height: $_theme_margin * 4;
+					line-height: $_theme_margin * 2;
 					color: $_white;
 					font-size: $_theme_margin * 0.7;
 				}
@@ -28,21 +30,29 @@
 		}
 		
 		.logo{ //LOGO
-			//
+			display: flex;
 			h2{
-				display: block;
-				margin: 0 ;
+				//display: block;
+				margin: 0 auto;
 				padding:0;
-				line-height: $_theme_margin * 4;
+				line-height: $_theme_margin * 2;
 				text-align: center;
 				color: $_white;
+				font-weight: bold;
+				span{
+					color:$_dark-red;
+					font-weight: normal;
+					display: block;
+
+				}
 			} 
 
 		}
 
 		.search-lup{
+			display: flex;
 			a{
-				line-height: $_theme_margin * 4;
+				line-height: $_theme_margin * 2;
 				margin: auto;
 				margin-right: 0;
 				display: table;
@@ -53,39 +63,89 @@
 			}
 		}
 	}
-	.top-slider{  // Caresouel
+	.carousel-inner{  // Caresouel
 		//position: relative;
 		height: 100%;
 		top: 0;
 		z-index: 8888;
 		img{
-			//max-height: 100%;
+			max-height: 100%;
 
 		}
 	}
 }
-.top-slider .item{
-	//position:absolute;
-	height: 100%;
-	box-sizing: border-box;
+.carousel-inner .item{
+	 //position:relative;
+	-moz-background-size: cover;
+	 -webkit-background-size: cover;
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 width: 100%;
+	 height: 100%;
 
 }
-.top-slider .item img{
+.carousel-inner img{
 	height: 100%;
 	width:100%;
+	display:block;
 	}
+	
+
 
 /*-----  End of MAIN HEADER  ------*/
+.carousel-control.right a span,
+.carousel-control.left a span {
+  // background-image: none;
+	z-index:99999999;
+}
+
+/*========== carousel-indicators  ==========*/
+#myCarousel .carousel-indicators {
+	z-index:99999!important;
+	@include transition(all 0.3s ease-in-out);
+	li{
+	  width: 8em;
+	  height: 8em;
+	  padding:0;
+	  //border: 4px $_black solid;
+	  border-radius: 50%;
+	  background-color: transparent;
+	  background-color: $_white;
+	  vertical-align: 2em;
+	  margin: 0 1em;
+	  z-index:99999 !important;
+	  position:relative;
+	  //overflow: hidden;
+	  //@include transition(all 0.3s ease-in-out);
+	  img{
+	  	margin: 0;
+	  	padding: 0;
+	  	height: 100%;
+	  	width: 100%;
+	  	position:absolute;
+	  	display: block;
+	  	opacity: 0.7;
+	  	@include transition(all 0.3s ease-in-out);
+
+	  }
+	}
+	.active{
+		 //border: 4px red solid;
+		 img{
+		 	opacity: 1;
+		 }
+	}
+}
 
 
-html, body {
-height:100%;
-margin:0;
-padding:0;
-}
-.carousel, .item, .active {
-height:100%;
-}
-.carousel-inner {
-height:100%;
+
+
+/*==========  Media Query 768px and Heigher  ==========*/
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and(min-width: 768px) { 
+	.top-section{
+		position:absolute;
+	}
 }

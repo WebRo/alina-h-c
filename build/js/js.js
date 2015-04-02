@@ -1,1 +1,1 @@
-$(document).ready(function(){"use strict";$(window).resize(function(){})()});
+$(document).ready(function(){var i=$(window).height();$(".fullheight").css("height",i),$(".fullheight .item img").each(function(){var i=$(this).attr("src");$(this).parent().css({"background-image":"url("+i+")"}),$(this).remove()}),$(window).resize(function(){i=$(window).height(),$(".fullheight").css("height",i)})});
